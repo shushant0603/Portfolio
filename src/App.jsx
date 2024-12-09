@@ -1,18 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
-import Navbar from './Navbar.jsx'; 
-import Home from './Home.jsx'; // Ensure these components are correctly imported
-import About from './About.jsx';
-import Projects from './Projects.jsx';
-import CodingProfile from './CodingProfile.jsx';
-import HireMe from './HireMe.jsx';
+import Navbar from './components/Navbar.jsx'; 
+import Home from './components/Home.jsx'; // Ensure these components are correctly imported
+import About from './components/About.jsx';
+import Projects from './components/Projects.jsx';
+import CodingProfile from './components/CodingProfile.jsx';
+import HireMe from './components/HireMe.jsx';
 
 function App() {
 
   return (
     <>
-  
      <Router>
      <Navbar /> 
       <Routes>

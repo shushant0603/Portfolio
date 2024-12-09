@@ -1,13 +1,37 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react';
+// import './public/stylesheet/home.css'
+import "./home.css"
 const Home = () => {
+    const [text,setText]=useState("web developer");
+    useEffect(() => {
+        const textLoader = () => {
+          setTimeout(() => {
+            setText("Web Developer");
+          }, 0);
+          setTimeout(() => {
+            setText("Software Developer");
+          }, 4000);
+          setTimeout(() => {
+            setText("Developer");
+          }, 8000);
+        };
+    
+        // Initial text change
+        textLoader();
+        
+        // Re-run the text loader every 12 seconds
+        const interval = setInterval(textLoader, 12000);
+    
+        // Cleanup on component unmount
+        return () => clearInterval(interval);
+      }, []);
   return (
     <div>
          <section class="home" id="home">
         <div class="hero-content">
             <h3>Hello, It's Me</h3>
             <h1>Shushant kumar</h1>
-            <h3>And I'm a <span id="text"></span></h3>
+            <h3>And I'm a <span id="text">{text}</span></h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto quo eos cum, reiciendis maxime laboriosam deserunt nobis necessitatibus voluptates autem, eum sit hic accusamus corrupti alias repudiandae esse! Aliquam, ullam!</p>
             <div class="social-media">
                 <a href="https://github.com/shushant0603" target="_blank"><i class='bx bxl-github'>
@@ -19,7 +43,7 @@ const Home = () => {
      
             <a href="#" class="btn">Download CV</a>
         </div>
-        <img src="photos/star.png" alt="hello" class="hero_star star" />
+        {/* <img src="photos/star.png" alt="hello" class="hero_star star" /> */}
         <div class="home-img">
             <img src="photos/Shushant.jpg" alt="" class="image" />
         </div>
