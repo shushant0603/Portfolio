@@ -1,55 +1,118 @@
-import React, { useEffect, useState } from 'react';
-// import './public/stylesheet/home.css'
-import "./home.css"
+import React, { useEffect, useState, useRef } from 'react';
+import { gsap } from "gsap";
+import "./home.css"; // Ensure your CSS is linked properly
+
 const Home = () => {
-    const [text,setText]=useState("web developer");
-    useEffect(() => {
-        const textLoader = () => {
-          setTimeout(() => {
-            setText("Web Developer");
-          }, 0);
-          setTimeout(() => {
-            setText("Software Developer");
-          }, 4000);
-          setTimeout(() => {
-            setText("Developer");
-          }, 8000);
-        };
-    
-        // Initial text change
-        textLoader();
-        
-        // Re-run the text loader every 12 seconds
-        const interval = setInterval(textLoader, 12000);
-    
-        // Cleanup on component unmount
-        return () => clearInterval(interval);
-      }, []);
+  const heroContentRef = useRef(null); // Reference for the hero content
+  const imgRef = useRef(null); // Reference for the home-img div
+  
+  useEffect(() => {
+    // Select all elements inside the hero-content div
+    const heroContentItems = heroContentRef.current.querySelectorAll(".hero-content h3, .hero-content h4 ,.hero-content h1, .hero-content p, .hero-content span, .social-media, .btn");
+
+    // GSAP Animation for each element inside hero-content (sequentially)
+    gsap.fromTo(
+    heroContentItems, 
+    {
+      opacity: 0, 
+      x: () => (Math.random() - 0.5) * 500, 
+      y: () => (Math.random() - 0.5) * 500, 
+      rotation: () => (Math.random() - 0.5) * 60, 
+      scale: 0.9, 
+    }, 
+    {
+      opacity: 1, 
+      x: 100, // Move to an initial position (e.g., 100px to the right)
+      y: 100, // Move to an initial position (e.g., 100px down)
+      scale: 1, 
+      rotation: 0, 
+      duration: 1, 
+      stagger: 0.3, 
+      ease: "back.out(1.7)", 
+      onComplete: () => {
+        // After reaching the initial position, animate to the final position
+        gsap.to(heroContentItems, {
+          x: 0, 
+          y: 0, 
+          duration: 1, 
+          stagger: 0.3, 
+          ease: "back.out(1.7)", 
+        });
+      }
+    }
+  );
+
+  const imgElement = imgRef.current;
+  if (imgElement) {
+    gsap.fromTo(
+      imgElement,
+      {
+        opacity: 0, 
+        x: () => (Math.random() - 0.5) * 500, 
+        y: () => (Math.random() - 0.5) * 500, 
+        rotation: () => (Math.random() - 0.5) * 60, 
+      }, 
+      {
+        opacity: 1, 
+        x: 100, // Move to an initial position (e.g., 100px to the right)
+        y: 100, // Move to an initial position (e.g., 100px down)
+        rotation: 360, 
+        duration: 1, 
+        onComplete: () => {
+          // After reaching the initial position, animate to the final position
+          gsap.to(imgElement, {
+            x: 0, 
+            y: 0, 
+            duration: 1, 
+            ease: "back.out(1.7)", 
+          });
+        }
+      }
+    );
+  } else {
+    console.error("Image element not found!");
+  }
+}, []);  // Empty dependency array to run the effect once when component mounts
+
+  const [text, setText] = useState("web developer");
+
+  // Text loader to change the text every few seconds
+  useEffect(() => {
+    const textLoader = () => {
+      setTimeout(() => {
+        setText("Web Developer");
+      }, 0);
+    };
+
+    // Initial text change
+    textLoader();
+
+    // Re-run the text loader every 12 seconds
+    const interval = setInterval(textLoader, 12000);
+
+    return () => clearInterval(interval); // Cleanup interval
+  }, []);
+
   return (
     <div>
-         <section class="home" id="home">
-        <div class="hero-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Shushant kumar</h1>
-            <h3>And I'm a <span id="text">{text}</span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto quo eos cum, reiciendis maxime laboriosam deserunt nobis necessitatibus voluptates autem, eum sit hic accusamus corrupti alias repudiandae esse! Aliquam, ullam!</p>
-            <div class="social-media">
-                <a href="https://github.com/shushant0603" target="_blank"><i class='bx bxl-github'>
-                    </i></a>
-                <a href="https://x.com/shushantku68275" target="_blank"><i class='bx bxl-twitter'></i></a>
-                <a href="https://www.linkedin.com/in/shushant-kumar-771775290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/shushant0625?igsh=MWNuc3BueDNoOXAwNQ==" target="_blank"><i class='bx bxl-instagram'></i></a>
-            </div>
-     
-            <a href="#" class="btn">Download CV</a>
+      <section className="home" id="home">
+        <div className="hero-content" ref={heroContentRef}>
+          <h3>Hello, It's Me</h3>
+          <h1>Shushant Pandey</h1>
+          <h4>And I'm a <span id="text">{text}</span></h4>
+          <div className="social-media">
+            <a href="https://github.com/shushant0603" target="_blank"><i className="bx bxl-github"></i></a>
+            <a href="https://x.com/shushantku68275" target="_blank"><i className="bx bxl-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/shushant-kumar-771775290" target="_blank"><i className="bx bxl-linkedin"></i></a>
+            <a href="https://www.instagram.com/shushant0625" target="_blank"><i className="bx bxl-instagram"></i></a>
+          </div>
         </div>
-        {/* <img src="photos/star.png" alt="hello" class="hero_star star" /> */}
-        <div class="home-img">
-            <img src="photos/Shushant.jpg" alt="" class="image" />
+        <div className="home-img" ref={imgRef}>
+          <img src="photos/Shushant.jpg" alt="Shushant" className="image" />
         </div>
-    </section>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

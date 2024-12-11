@@ -25,8 +25,8 @@ const Navbar = () => {
     <div>
       <header className="header" ref={headerRef}>
         <div className="logo" id="logo">
-          <NavLink to="/">Portfolio</NavLink>
-          <img src="photos/star.png" alt="Logo" className="star" />
+          <div className='nav-image'><img  src="https://i.pinimg.com/736x/0e/a3/6f/0ea36f0540ae1282d39927af11e2b057.jpg" alt="img" /></div>
+          <h2>Sp</h2>
         </div>
 
         <nav className="navbar">
