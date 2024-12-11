@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import './Project.css'; 
+
 
 const projectData = [
   {
