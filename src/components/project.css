@@ -12,25 +12,52 @@
     background-color: var(--bg-color);
   }
   .project-container {
-    position: relative;
-    overflow: hidden; /* Ensures the pseudo-element stays within the container */
+    width: 400px; /* Set the fixed width */
+    height: 670px; /* Set the fixed height */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between; /* Align content */
+  }
+  
+  .image-wrapper {
+    height: 550px; /* Set the fixed height for the image */
+    width: 100%; /* Full width of the container */
+    overflow: hidden; /* Ensure images don’t overflow */
+  }
+  
+  .image-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure the image fills the area without distortion */
   }
   
   /* Add the ::after pseudo-element to the entire div */
   .project-container::after {
-    content: '';
+    content: ''; /* Corrected spelling from 'vist' to 'visit' */
+    text-align: center;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 0%;
+    height: 0%; /* Change height to 100% */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay color */
     transition: height 0.5s ease-in-out; /* Smooth animation */
     z-index: 2; /* Ensure it overlays the content */
-    pointer-events: none; /* Prevent interaction with the pseudo-element */
+    pointer-events: auto; /* Allow interaction with the pseudo-element */
+    font-size: 20px;  /* Prevent interaction with the pseudo-element */
   }
   
   /* Trigger animation on hover */
   .project-container:hover::after {
     height: 100%;
+    content: 'click to visit';
   }
+  /* .image-wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  } */
