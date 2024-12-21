@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         <nav className="navbar">
-          {/* Using dynamic className for active link */}
+       
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active-link home" : "home")}

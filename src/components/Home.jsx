@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { gsap } from "gsap";
 import "./home.css"; // Ensure your CSS is linked properly
+import About from './About';
+import Projects from './Projects';
 
 const Home = () => {
   const heroContentRef = useRef(null); // Reference for the hero content
@@ -10,7 +12,7 @@ const Home = () => {
     // Select all elements inside the hero-content div
     const heroContentItems = heroContentRef.current.querySelectorAll(".hero-content h3, .hero-content h4 ,.hero-content h1, .hero-content p, .hero-content span, .social-media, .btn");
 
-    // GSAP Animation for each element inside hero-content (sequentially)
+  
     gsap.fromTo(
     heroContentItems, 
     {
@@ -22,15 +24,15 @@ const Home = () => {
     }, 
     {
       opacity: 1, 
-      x: 100, // Move to an initial position (e.g., 100px to the right)
-      y: 100, // Move to an initial position (e.g., 100px down)
+      x: 100, 
+      y: 100, 
       scale: 1, 
       rotation: 0, 
       duration: 1, 
       stagger: 0.3, 
       ease: "back.out(1.7)", 
       onComplete: () => {
-        // After reaching the initial position, animate to the final position
+    
         gsap.to(heroContentItems, {
           x: 0, 
           y: 0, 
@@ -48,26 +50,14 @@ const Home = () => {
       imgElement,
       {
         opacity: 0, 
-        x: () => (Math.random() - 0.5) * 500, 
-        y: () => (Math.random() - 0.5) * 500, 
-        rotation: () => (Math.random() - 0.5) * 60, 
-      }, 
-      {
-        opacity: 1, 
-        x: 100, // Move to an initial position (e.g., 100px to the right)
-        y: 100, // Move to an initial position (e.g., 100px down)
-        rotation: 360, 
-        duration: 1, 
-        onComplete: () => {
-          // After reaching the initial position, animate to the final position
-          gsap.to(imgElement, {
-            x: 0, 
-            y: 0, 
-            duration: 1, 
-            ease: "back.out(1.7)", 
-          });
-        }
+        x: -100,
+        // duration: 1,
+      }, {
+
+        opacity: 1,
+        x: 0,
       }
+      
     );
   } else {
     console.error("Image element not found!");
@@ -111,6 +101,8 @@ const Home = () => {
           <img src="photos/Shushant.jpg" alt="Shushant" className="image" />
         </div>
       </section>
+      <Projects/>
+      <About/>
     </div>
   );
 };
