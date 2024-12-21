@@ -29,6 +29,7 @@ html{
 
 body{
 background-color: var(--bg-color);
+/* background-color: #183717; */
 color: var(--text-color);
 }
 

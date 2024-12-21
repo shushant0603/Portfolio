@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import "./home.css"; // Ensure your CSS is linked properly
 import About from './About';
 import Projects from './Projects';
+import HireMe from './HireMe';
 
 const Home = () => {
   const heroContentRef = useRef(null); // Reference for the hero content
@@ -102,6 +103,7 @@ const Home = () => {
         </div>
       </section>
       <Projects/>
+      <HireMe/>
       <About/>
     </div>
   );
