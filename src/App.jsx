@@ -6,7 +6,6 @@ import Home from './components/Home.jsx'; // Ensure these components are correct
 import About from './components/About.jsx';
 import Projects from './components/Projects.jsx';
 import './components/project.css';
-import './components/codingprofile.css';
 import CodingProfile from './components/CodingProfile.jsx';
 import HireMe from './components/HireMe.jsx';
 

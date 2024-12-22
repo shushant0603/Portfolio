@@ -60,72 +60,63 @@ color: var(--text-color);
   font-family: bm;
 
 }
-.marquee {
-    display: flex;
-    overflow: hidden;
-    height: 10vh;
-    user-select: none;
-    gap: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-top: 4rem;
-    cursor:pointer;
+.card-box{
+  width: 25%;   
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 10%; */
+  background-color: rgba(235, 228, 228, 0.772);
+  border-radius: 20px; 
   }
-  
-  
-  .marquee:hover {
-    -webkit-text-stroke: 1.5px #fff;
-      text-stroke: 1.5px #fff;
-      -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
-      color: transparent;
-      transition: all 0.5s ease;
-      -webkit-font-smoothing: antialiased;
-      /*-moz-osx-font-smoothing: grayscale;*/
+  .card-box i{
+      font-size: 60px;
+      color:rgb(249, 9, 9);
+      /* margin-top: 20%; */
+  }
+  .card-box h1{
+      font-size: 30px;
+      color: #000;
+      /* margin-top: 20%; */
+  }
+  .percentage{
+      height: 20px;
+      width: 80%;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   
   }
-  
-  .marquee__group {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
+  .percentage .percent{
+      width: 30%;
+      height: 10px;
+      background-color: red;
+      border-radius: 10px;
+      /* margin-top: 10%; */
+  }
+  .card-box p{
+      color: #000;
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      text-align: center;
+  }
+  .card-container{
+      margin-top: 5%;
+     padding: 4rem;
+      display: flex;
+      gap: 100px;
     justify-content: space-between;
-    gap: 2rem;
-    min-width: 100%;
-    animation: scroll 15s linear infinite reverse;
+      flex-wrap: wrap;
+      
   }
-  .marquee__group a span{
-    transform: scale(1.5);
+  .text{
+      margin-top: 100px;
+      font-size: 6rem;
+      text-align: center;
   }
-
-  
-  .marquee__group a {
-    color: white;
-    font-size: 4vw;
-    font-weight: 800;
-    white-space: nowrap;
-    font-family: 'Syne', sans-serif !important;
-    /*text-transform: uppercase;*/
     
-  }
+    
   
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - 2rem));
-    }
-  }
   
-  @media only screen and (min-width: 360px) {
-      .marquee__group span {
-          font-size: 6.5vw;
-      }
-  }
-
-  
-
-
-
-
