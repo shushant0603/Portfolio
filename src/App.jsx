@@ -5,8 +5,8 @@ import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx'; // Ensure these components are correctly imported
 import About from './components/About.jsx';
 import Projects from './components/Projects.jsx';
-import './components/project.css'
-import "./Codingprofile.css"
+import './components/project.css';
+import './components/codingprofile.css';
 import CodingProfile from './components/CodingProfile.jsx';
 import HireMe from './components/HireMe.jsx';
 
