@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './minorComponents/Card'
-import './CodingProfile.css'
+import './Codingprofile.css'
 
 
 function CodingProfile() {
