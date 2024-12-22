@@ -1,10 +1,20 @@
 import React from 'react'
+import Card from './minorComponents/Card'
+import './stylesheets/CodingProfile.css'
+
 
 function CodingProfile() {
   return (
-    <div className='flex items-center text-7xl min-h-screen justify-center bg-zinc-500 p-5 flex-col'>
-      <h1>Working.......</h1>
+   <div className=" min-h-screen">
+    <h1 className='text'>skills</h1>
+     <div className='coding'>
+    
+    <Card/>
+    
+   
     </div>
+  
+   </div>
   )
 }
 

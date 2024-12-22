@@ -4,6 +4,7 @@ import "./home.css"; // Ensure your CSS is linked properly
 import About from './About';
 import Projects from './Projects';
 import HireMe from './HireMe';
+import CodingProfile from './CodingProfile';
 
 const Home = () => {
   const heroContentRef = useRef(null); // Reference for the hero content
@@ -102,6 +103,7 @@ const Home = () => {
           <img src="photos/Shushant.jpg" alt="Shushant" className="image" />
         </div>
       </section>
+      <CodingProfile/>
       <Projects/>
       <HireMe/>
       <About/>
