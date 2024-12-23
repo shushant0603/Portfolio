@@ -9,10 +9,11 @@ import CodingProfile from './CodingProfile';
 const Home = () => {
   const heroContentRef = useRef(null); // Reference for the hero content
   const imgRef = useRef(null); // Reference for the home-img div
+  const socialMedia=useRef(null);
   
   useEffect(() => {
     // Select all elements inside the hero-content div
-    const heroContentItems = heroContentRef.current.querySelectorAll(".hero-content h3, .hero-content h4 ,.hero-content h1, .hero-content p, .hero-content span, .social-media, .btn");
+    const heroContentItems = heroContentRef.current.querySelectorAll(".hero-content h3, .hero-content h4 ,.hero-content h1, .hero-content p, .hero-content span, .btn");
 
   
     gsap.fromTo(
@@ -45,6 +46,21 @@ const Home = () => {
       }
     }
   );
+ const social=socialMedia.current;
+ if(social){
+  gsap.fromTo(
+    social,{
+      
+      opacity:0,
+      delay:4,
+    },{
+      opacity:1,
+      delay:4,
+    
+    }
+
+  );
+ }
 
   const imgElement = imgRef.current;
   if (imgElement) {
@@ -92,7 +108,7 @@ const Home = () => {
           <h3>Hello, It's Me</h3>
           <h1>Shushant Pandey</h1>
           <h4>And I'm a <span id="text">{text}</span></h4>
-          <div className="social-media">
+          <div className="social-media" ref={socialMedia}>
             <a href="https://github.com/shushant0603" target="_blank"><i className="bx bxl-github"></i></a>
             <a href="https://x.com/shushantku68275" target="_blank"><i className="bx bxl-twitter"></i></a>
             <a href="https://www.linkedin.com/in/shushant-kumar-771775290" target="_blank"><i className="bx bxl-linkedin"></i></a>
@@ -103,10 +119,11 @@ const Home = () => {
           <img src="photos/Shushant.jpg" alt="Shushant" className="image" />
         </div>
       </section>
+      <About/>
       <CodingProfile/>
       <Projects/>
       <HireMe/>
-      <About/>
+     
     </div>
   );
 };

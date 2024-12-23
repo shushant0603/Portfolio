@@ -33,33 +33,10 @@ background-color: var(--bg-color);
 color: var(--text-color);
 }
 
-.coding-profile-content{
-    padding-top: 70px;
-    text-align: center;
-}
-.coding-profile-content .cards{
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    padding: 0 30px;
-  
-}
 
-.coding-profile-content .cards .card{
-    height: 400px;
-    width: 30%;
-    background-color: #36373a;
-    border-radius: 120px;
-    box-shadow: 0 0 3rem var(--main-color);
-}
-.coding-profile h2{
-  font-size: 40px;
 
-  margin-bottom: 3rem;
-  color: #FDA523;
-  font-family: bm;
 
-}
+
 .card-box{
   width: 25%;   
   height: 20vh;
@@ -80,22 +57,8 @@ color: var(--text-color);
       color: #000;
       /* margin-top: 20%; */
   }
-  .percentage{
-      height: 20px;
-      width: 80%;
-      background-color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-  }
-  .percentage .percent{
-      width: 30%;
-      height: 10px;
-      background-color: red;
-      border-radius: 10px;
-      /* margin-top: 10%; */
-  }
+ 
+ 
   .card-box p{
       color: #000;
       font-size: 1.5rem;
@@ -115,6 +78,34 @@ color: var(--text-color);
       margin-top: 100px;
       font-size: 6rem;
       text-align: center;
+  }
+  @media(max-width:600px){
+    .card-container{
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .card-box{
+        /* background: #000; */
+        width: 30%;
+        height: 15vh;
+        padding: 1rem ;
+        margin-top: 4rem;
+    }
+    .card-box i{
+        font-size: 5rem;
+        color:rgb(249, 9, 9);
+        /* margin-top: 20%; */
+    }
+    .card-box h1{
+        font-size: 2rem;
+        color: #000;
+        /* margin-top: 20%; */
+    }
+   
+   
+    .card-box p{
+     display: none;
+    }
   }
     
     

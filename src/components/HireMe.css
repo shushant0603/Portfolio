@@ -1,74 +1,90 @@
-.main{
+.main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
     padding: 0 10%;
 }
-.left{
-    height:50%;
-    /* margin-top: 5%; */
-    width:40%;
-    /* font-size: 4rem; */
-    /* background-color: red; */
+
+.left {
+    height: 50%;
+    width: 40%;
     position: relative;
 }
-.left h1{
+
+.left h1 {
     font-size: 7em;
 }
-.left .details{
+
+.left .details {
     margin-top: 5%;
 }
-.left h2{
+
+.left h2 {
     /* margin-top: 10%; */
     display: flex;
     align-items: center;
     font-size: 1.7rem;
 }
-.left h2 i{
+
+.left h2 i {
     padding: 1rem;
     font-size: 2.2rem;
-    color:var(--main-color);
+    color: var(--main-color);
     border-radius: 50%;
 }
-.social-media-links{
-    display: flex; /* Use flexbox to arrange items in a row */
-    justify-content: center; /* Center the icons horizontally */
+
+.social-media-links {
+    display: flex;
+    /* Use flexbox to arrange items in a row */
+    justify-content: center;
+    /* Center the icons horizontally */
     /* margin-left: 40%; 
     margin-top: 10%;
    */
-   position: absolute;
+    position: absolute;
     bottom: 30%;
 
 
 }
+
 .social-media-links a {
     font-size: 2rem;
     color: #fff;
     height: 3rem;
     width: 3rem;
-    border-radius: 50%; /* This makes the icon circular */
-    margin: 0 20px; /* Horizontal margin for spacing */
-    display: flex; /* Center the icon */
-    justify-content: center; /* Center the icon horizontally */
-    align-items: center; /* Center the icon vertically */
-   
-    background-color: var(--second-bg-color); /* Set the background color */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
-    box-shadow: 0 0 1rem var(--main-color); /* Add shadow normally */
-    transform: scale(1.5); /* Scale normally */
+    border-radius: 50%;
+    /* This makes the icon circular */
+    margin: 0 20px;
+    /* Horizontal margin for spacing */
+    display: flex;
+    /* Center the icon */
+    justify-content: center;
+    /* Center the icon horizontally */
+    align-items: center;
+    /* Center the icon vertically */
+
+    background-color: var(--second-bg-color);
+    /* Set the background color */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for hover effect */
+    box-shadow: 0 0 1rem var(--main-color);
+    /* Add shadow normally */
+    transform: scale(1.5);
+    /* Scale normally */
 }
 
 .social-media-links a:hover {
     background-color: rgb(131, 226, 131);
 }
-.left button{
+
+.left button {
     display: inline-block;
     padding: 2rem 2.8rem;
-    background-color:var(--main-color);
+    background-color: var(--main-color);
     border-radius: 1rem;
     font-size: 1.6rem;
-    color:var(--second-bg-color);
+    color: var(--second-bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
     margin-top: 12rem;
@@ -76,9 +92,10 @@
     z-index: 1;
 
 }
-.right{
-    height:60%;
-    width:60%;
+
+.right {
+    height: 60%;
+    width: 60%;
     margin-top: 20%;
     /* background-color: blue; */
     display: flex;
@@ -89,41 +106,209 @@
     gap: 3rem;
 
 }
-.right .name{
+
+.right .name {
     font-size: 2rem;
     font-weight: 600;
     padding: 1.5rem;
-    background-color:  rgb(73, 72, 72);
+    background-color: rgb(73, 72, 72);
     border-radius: 0.5rem;
 }
-.right .email{
+
+.right .email {
     font-size: 1.6rem;
     font-weight: 500;
     padding: 1.5rem;
     background-color: rgb(73, 72, 72);
     border-radius: 0.5rem;
 }
-.right .message{
+
+.right .message {
     font-size: 1.6rem;
     font-weight: 500;
     padding: 1.5rem;
     display: flex;
     text-align: start;
-    height:15rem;
+    height: 15rem;
     background-color: rgb(73, 72, 72);
     border-radius: 0.5rem;
     resize: none;
 }
-.right button{
+
+.right button {
     display: inline-block;
     padding: 1.5rem 2.8rem;
     width: 22%;
-    background-color:var(--main-color);
+    background-color: var(--main-color);
     border-radius: 1rem;
     font-size: 1.6rem;
-    color:var(--second-bg-color);
+    color: var(--second-bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
     margin-top: 1rem;
     z-index: 1;
+}
+
+@media(max-width:600px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        /* background: #000; */
+        padding: 0 10%;
+    }
+
+    .left {
+        height: 50%;
+        width: 100%;
+        margin-top: 30%;
+        position: relative;
+    }
+
+    .left h1 {
+        font-size: 3.5em;
+    }
+
+    .left .details {
+        margin-top: 0%;
+    }
+
+    .left h2 {
+        /* margin-top: 10%; */
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        color: #e0d5d5;
+    }
+
+    .left h2 i {
+        padding: 1rem;
+        font-size: 2.2rem;
+        color: var(--main-color);
+        border-radius: 50%;
+    }
+
+    .social-media-links {
+        display: flex;
+        /* Use flexbox to arrange items in a row */
+        justify-content: center;
+        /* Center the icons horizontally */
+        /* margin-left: 40%; 
+        margin-top: 10%;
+       */
+       
+        position: absolute;
+        bottom: 40%;
+
+
+    }
+
+    .social-media-links a {
+        font-size: 1rem;
+        color: #fff;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        /* This makes the icon circular */
+        margin: 0 20px;
+        /* Horizontal margin for spacing */
+        display: flex;
+        /* Center the icon */
+        justify-content: center;
+        /* Center the icon horizontally */
+        align-items: center;
+        /* Center the icon vertically */
+
+        background-color: var(--second-bg-color);
+        /* Set the background color */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        /* Smooth transition for hover effect */
+        box-shadow: 0 0 1rem var(--main-color);
+        /* Add shadow normally */
+        transform: scale(1.5);
+        
+    }
+
+    .social-media-links a:hover {
+        background-color: rgb(131, 226, 131);
+    }
+
+    .left button {
+     
+        /* height: auto; */
+        display: inline-block;
+        /* background-color: aquamarine; */
+        padding: 2rem 2.8rem;
+        background-color: var(--main-color);
+        border-radius: 1rem;
+        font-size: 1.6rem;
+        color: var(--second-bg-color);
+        letter-spacing: .1rem;
+        font-weight: 600;
+        /* margin-bottom: 14rem; */
+        /* margin-left: 1rem; */
+        z-index: 1;
+
+    }
+    .right {
+        height: 50%;
+        width: 100%;
+        margin-top: 5%;
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        padding: 1.5rem;
+        gap: 3rem;
+    
+    }
+    
+    .right .name {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 1rem;
+        background-color: rgb(73, 72, 72);
+        border-radius: 0.5rem;
+    }
+    
+    .right .email {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 1rem;
+        background-color: rgb(73, 72, 72);
+        border-radius: 0.5rem;
+    }
+    
+    .right .message {
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 1.5rem;
+        display: flex;
+        text-align: start;
+        height: 7rem;
+        background-color: rgb(73, 72, 72);
+        border-radius: 0.5rem;
+        resize: none;
+    }
+    
+    .right button {
+        display: inline-block;
+        padding: 1.5rem 2.8rem;
+    width: 35%;
+        background-color: var(--main-color);
+        border-radius: 1rem;
+        font-size: 1.6rem;
+        color: var(--second-bg-color);
+        letter-spacing: .1rem;
+        font-weight: 600;
+        margin-top: 0rem;
+        z-index: 1;
+    }
+
+    /* .right{
+        display: none;
+    } */
 }

@@ -56,8 +56,6 @@
     height: 100%;
     content: 'click to visit';
   }
-  /* .image-wrapper img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  } */
+ @media(max-width:600px){
+  
+ }

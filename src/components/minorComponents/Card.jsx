@@ -27,7 +27,7 @@ const cardData=[
 },
 {
   icon:"bx bxs-data",
-  title: 'Database',
+  title: 'MongoDb',
 
   description: 'JavaScript is a high-level, just-in-time compiled, multi-paradigm programming la ',
 },
