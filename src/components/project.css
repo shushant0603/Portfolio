@@ -33,29 +33,8 @@
   }
   
   /* Add the ::after pseudo-element to the entire div */
-  .project-container::after {
-    content: ''; /* Corrected spelling from 'vist' to 'visit' */
-    text-align: center;
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0%; /* Change height to 100% */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay color */
-    transition: height 0.5s ease-in-out; /* Smooth animation */
-    z-index: 2; /* Ensure it overlays the content */
-    pointer-events: auto; /* Allow interaction with the pseudo-element */
-    font-size: 20px;  /* Prevent interaction with the pseudo-element */
-  }
-  
-  /* Trigger animation on hover */
-  .project-container:hover::after {
-    height: 100%;
-    content: 'click to visit';
-  }
+
+
  @media(max-width:600px){
   
  }

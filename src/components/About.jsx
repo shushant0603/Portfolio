@@ -12,8 +12,7 @@ const About = () => {
        <div className='About_text'>
         <h1>About Me</h1>
         <h2>MERN Developer</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis commodi iure placeat labore modi, magni ad. Nobis porro consequuntur repellendus earum, quam doloremque aspernatur quaerat animi quia hic deserunt repudiandae magni ducimus. Itaque exercitationem aliquam dolorum sint dicta, nihil ducimus iusto tempora alias quas eum reiciendis, quos quo quidem harum!
-        </p>
+        <p>I am a B.Tech student in the Computer Science and Business Systems (CSBS) branch at MAKAUT, currently in my 3rd semester with an overall CGPA of 7. Passionate about coding and technology, I enjoy exploring innovative ideas and turning them into functional projects.</p>
         <button>Hire me</button>
         </div>  
     </div>

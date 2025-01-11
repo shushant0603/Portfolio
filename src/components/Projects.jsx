@@ -8,7 +8,8 @@ const projectData = [
     title: 'Chat_App',
     description: 'Chat with your loved one',
     image: 'https://plus.unsplash.com/premium_photo-1684761949431-53b58936cf2c?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    link: 'https://chatapp-blyu.onrender.com/',
+    link: ' https://chatapp-blyu.onrender.com/',
+   
   },
   {
     id: 2,
