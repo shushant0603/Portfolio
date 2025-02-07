@@ -37,12 +37,12 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "active-link about" : "about")}
           >
             About
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/projects"
             className={({ isActive }) =>
@@ -65,7 +65,7 @@ const Navbar = () => {
               isActive ? "active-link hire-me" : "hire-me"
             }
           >
-            <i className="bx bxs-phone-call"></i>Hire Me
+            <i className="bx bxs-phone-call"></i>Contact
           </NavLink>
         </nav>
       </header>

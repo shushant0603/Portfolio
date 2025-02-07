@@ -5,7 +5,7 @@ import Card from './minorComponents/Card'
 function CodingProfile() {
   return (
    <div className=" min-h-screen">
-    <h1 className='text'>skills</h1>
+    <h2 style={{textAlign:"center", fontSize:'5rem', marginTop:'50px'}}>skills</h2>
      <div className='coding'>
     
     <Card/>
